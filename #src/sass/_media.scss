@@ -1,0 +1,136 @@
+@media (max-width: 976px) {
+  .mobile {
+    display: block;
+    margin: 0 auto;
+  }
+  .desktop,
+  .lang {
+    display: none;
+  }
+  .burger-menu {
+    display: block;
+	transition: all .3s
+  }
+  .menu {
+    border: none;
+  }
+  .menu__list {
+    position: fixed;
+    left: -100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    transition: 0.3s;
+    &-item.lang {
+      display: block;
+      position: absolute;
+      font-size: 34px;
+      line-height: 42px;
+      margin-right: 0;
+      right: 0;
+      top: 650px;
+      transform: rotate(90deg);
+    }
+    .lang__line {
+      border-left: 4px solid #070707;
+      margin-right: 6px;
+    }
+  }
+  .menu__list.active {
+    left: 0;
+    height: 100%;
+  }
+  .menu__list-link {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 42px;
+    padding: 0 0 68px 26px;
+  }
+  .home {
+    padding-bottom: 83px;
+    &__info {
+      display: inline-block;
+      padding: 0 15px;
+    }
+    .years-old {
+      padding-bottom: 36px;
+    }
+  }
+  .about {
+    &__inner {
+      padding: 120px 120px 107px;
+    }
+  }
+  .skills {
+    &__inner {
+      padding: 83px 0 98px 0;
+    }
+    &__subtitle {
+      padding: 50px 0 70px 0;
+    }
+    &__list-item {
+      padding-bottom: 80px;
+    }
+  }
+  .portfolio {
+    &__inner {
+      padding: 81px 0;
+    }
+    &__image {
+      width: 700px;
+      height: 390px;
+    }
+  }
+  .contacts {
+    &__inner {
+      padding: 82px 0 90px 0;
+    }
+    &__send-message {
+      width: 316px;
+    }
+    &__socials {
+      padding: 48px 0;
+    }
+  }
+  .socials {
+    &__list {
+      justify-content: space-around;
+      &-item img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .about {
+    &__inner {
+      padding: 78px 30px;
+    }
+  }
+  .skills {
+    &__list {
+      flex-direction: column;
+    }
+    &__list + &__list {
+      padding: 0;
+    }
+  }
+  .skill-rate {
+    justify-content: center;
+  }
+  .portfolio {
+    &__list-item + &__list-item {
+      padding-top: 78px;
+    }
+    &__image {
+      width: 316px;
+      height: 176px;
+    }
+    &__link {
+      padding-top: 35px;
+    }
+  }
+}
