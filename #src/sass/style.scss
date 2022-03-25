@@ -213,23 +213,36 @@ li {
 
   &__image {
     width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
   }
 
   &__list {
     padding-top: 47px;
+    display: grid;
+    grid-template-columns: auto auto auto;
 
     &-item {
       text-align: center;
-      width: 100%;
+      background-color: #ffffff;
+      transition: 0.3s;
+      border-radius: 6px;
+      box-shadow: 0 11px 55px rgb(0 0 0 / 8%);
+      z-index: 999;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: 0.3s;
+      }
     }
 
     &-item+&-item {
-      padding-top: 99px;
+      margin-left: 24px;
     }
   }
 
   &__link {
-    padding-top: 45px;
+    margin: 12px 0 24px;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
@@ -242,6 +255,7 @@ li {
     transition: background-size 0.3s, background-position 0s 0.3s;
 
     &:hover {
+      cursor: pointer;
       background-position: 100% 100%;
       background-size: 0% 1px;
     }
@@ -309,6 +323,7 @@ li {
   top: 0;
   left: 0;
   transition: all 0.3s;
+  z-index: 9999;
 
   & .menu {
     border-bottom: none;
