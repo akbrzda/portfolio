@@ -1,4 +1,7 @@
-const { src, dest } = require("gulp");
+const {
+  src,
+  dest
+} = require("gulp");
 
 // Конфигурация
 const path = require("../config/path.js");
@@ -21,7 +24,7 @@ const font = () => {
       }))
     }))
     .pipe(newer(path.font.dest))
-    // .pipe(fonter(app.fonter))
+    .pipe(fonter(app.fonter))
     .pipe(dest(path.font.dest))
     .pipe(ttf2woff2())
     .pipe(dest(path.font.dest));
